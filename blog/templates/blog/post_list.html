@@ -1,8 +1,11 @@
 <div>
-    <h1>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <a href="/">신광이 리얼 개좆같네 시발 ㅋ ㅇㅈ? ㅇㅇㅈ</a>
-    </h1>
+    <h1><a href="/">신광이 씨발롬 ㅋ 개좆같음 ㅇㅈ? ㅇㅇㅈ</a></h1>
 </div>
 
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
